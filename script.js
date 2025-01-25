@@ -52,10 +52,11 @@ clear.addEventListener("click", () => {
   clearEnter();
 });
 
-deleteKey.addEventListener("click", () => {});
-//output.innerText = eval (evaluateing the expression to calculate the function)
-//index -= 1 (excluding the last index, so - 1)
-//slice - delete last number digited, last index
-//
+deleteKey.addEventListener("click", () => {
+  output.innerText = output.innerText.slice(0, -1); //starting from zero going to the last index -1
+  //we are not using length because we are applying slice on innertext
+});
 
-//if we click enter that should be error or give the eval (=)
+enter.addEventListener("click", () => {
+  output.innerText = eval(output.innerText);
+});
